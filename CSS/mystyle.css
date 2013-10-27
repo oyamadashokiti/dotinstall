@@ -1,0 +1,47 @@
+/*コメントだよ
+セレクタ
+プロパティ
+値
+*/
+
+h1{color:red;
+text-align:center;}
+
+#main{
+	font-size:36px;
+	}
+.bikkuri{
+	font-size:24px;
+	}
+	
+#hello,.bikkuri{
+	color:#0000cc;
+	}
+	
+p{
+	color:#096;
+	font-size:16px;
+	font-weight:bold;
+	line-height:2;
+	font-style:italic;
+	}
+	
+body{
+	background-color:pink;
+	background-image:url('neco.jpg');
+	background-repeat:repeat-x;
+	background-position:100px;
+	background-attachment:fixed;
+	}
+	
+#box1{
+	background-color:red;
+	width:50%;
+	height:50px;
+	border-color:green;
+	border-width:5px;
+	border-style:ridge;
+	
+	padding:100px 40px 200px 5px;
+	margin:40px;
+	}

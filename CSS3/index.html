@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html lang="ja">
+        <head>
+            <meta charset="utf-8">
+                <title>CSS3の勉強</title>
+                <style>
+                    /*div{
+                       width:380px;
+                       height: 380px;
+                       padding: 10px;
+                       margin: 30px;
+                       background-color: rgba(0,0,0,0.7);
+                       border: 4px solid orangered;
+                       /*border-radius: 10px 20px;*/
+                       /*border-top-right-radius: 20px;*/
+                       border-radius: 10%;
+                       /*background-image: url('neco.jpg');*/
+                       /*background-repeat: no-repeat;*/
+                       opacity: 0.8;
+                       box-shadow: 10px 20px 10px rgba(0,0,0,0.3) ;
+                       text-shadow: 1px 1px 0px white, 2px 2px 0 black;
+                       font-size: 24px;
+                       font-weight: bold;
+                       -webkit-animation-name: animationTest;
+                       -webkit-animation-duration:5s;
+                       -webkit-animation-timing-function: ease;
+                       -webkit-animation-delay: 1s;
+                       -webkit-animation-iteration-count: infinite;
+                       -webkit-animation-direction: normal;
+                       /*-webkit-transition-property:all;
+                       -webkit-transition-duration:1s;
+                       -webkit-transition-timing-function: ease;*/
+                       /*-webkit-transition-delay:2s;*/
+                    
+                       /*background:-webkit-linear-gradient(red 10%,yellow,blue 40%);*/
+                       /*background:-webkit-linear-gradient(45deg,red,yellow);*/
+                       /*background:-webkit-radial-gradient(top right,red 10%,blue);*/
+                       }*/
+                    @-webkit-keyframes animationTest{
+                        0%{width: 50px; background: orange;}
+                        50%{width: 100px; background: blue;}
+                        100{width: 150px; background: yellow;}
+                    }
+                    /*div:hover{
+                        height: 600px;
+                        width: 600px;
+                    }*/
+        
+                    #test2{
+                        /*float:right;*/
+                        /*-webkit-transform-origin: 0 0;*/
+                        /*-webkit-transform: skewX(45deg);*/
+                    }
+                    #test2{
+                        clear: right;
+                        /*-webkit-transform-origin: 0 0;*/
+                        /*-webkit-transform: skewX(45deg);*/
+                    }
+                    /*a[href*="dotinstall"]{
+                        color: red;
+                    }*/
+                    /*div *:last-child(3n){
+                        color: red;
+                    }*/
+                    div h1:only-of-type{
+                        color: pink;
+                    }
+                    input[type="text"]:enabled{
+                        border: 1px solid red;
+                    }
+                    input[type="radio"]:checked + label{
+                        font-weight: bold;
+                    }
+
+                </style>
+        </head>
+        
+        <body>
+            <div>
+            <h1>あいさつ</h1>
+            <p>UserName: <input type="text" name="user_name" value="taguchi" disabled></p>
+            <p>Email: <input type="text" name="email"></p>
+            <p>
+                <input type="radio" name="opt1" value="1"><label>iPhone</label>
+                <input type="radio" name="opt1" value="2"><label>Android</label>
+            </p>
+            <p>こんにちは</p>
+            <p>こんちは</p>
+            <p>こんち</p>
+            <h2>ういっす</h2>
+            <p>こんにちは</p>
+            <p>こんにちは</p>
+            <p>こんにちは</p>
+            <p>こんにちは</p>
+            </div>
+            <h1>リンク集</h1>
+            <ul>
+            <li><a href="http://dotinstall.com">dotinstall.com</a></li>    
+            <li><a href="http://google.com">Google</a></li>
+            <li><a href="http://yahoo.co.jp">Yahoo!</a></li>
+            <li><a href="mailto:taguchi@dotinstall.com">mail me!</a></li>
+            <div id="test1">test1</div>
+            <div id="test2">test2</div>
+        </body>
+    </html>

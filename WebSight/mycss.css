@@ -1,0 +1,38 @@
+#container{
+	/*width:  70%;*/
+	width: 500px;
+	margin: 0 auto;
+}
+
+#header{
+	background-color: red;
+	margin-bottom: 20px;
+}
+#main{
+	background-color: blue;
+	overflow: hidden;
+}
+
+#left{
+	background-color: pink;
+	float: left;
+	width: 90px;
+}
+
+#center{
+	background-color: yellow;
+	float: left;
+	width: 300px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#right{
+	background-color: purple;
+	float: left;
+	width: 90px;
+}
+
+#footer{
+	background-color: green;
+}

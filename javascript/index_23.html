@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Javascriptの勉強</title>
+</head>
+<body>
+    <h1>JavaScriptの勉強</h1>
+	<p>僕の名前は<span id = "myName">はやしだともき</span>です！</p>
+	<p>価格:<input type="text" id ="price">円</p>
+	<p><input type="button" value="クリック！" id="myButton"></p>
+
+	<script>
+		var e = document.getElementById('myName');
+		e.innerHTML = 'りんだ'
+		
+		var n = document.getElementById('price');
+		n.value = 500;
+		
+		var e = document.getElementById('myButton');
+		e.onclick = function () {
+			alert("クリックされました！");
+		}
+		
+		setTimeout(function () {
+			console.log("2秒経ちました");
+		}, 2000);
+		
+		var i = 0;
+		setInterval(function (){
+			console.log(i);
+			i++;
+		},1000);
+	
+    </script>
+</body>
+</html>

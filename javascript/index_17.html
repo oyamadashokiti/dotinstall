@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Javascriptの勉強</title>
+</head>
+<body>
+    <h1>JavaScriptの勉強</h1>
+    <script>
+		var s = new String("this is a pen.");
+		
+		console.log(s.substr(2,2));
+		
+		console.log(s.replace("pen","pencil"));
+		
+		var a = new Array(12,33,44,55);
+		
+		console.log(a.join("|"));
+		console.log(a.reverse());
+		
+		//var d = new Date(2012, 4, 7, 44, 5);
+		
+		var d = new Date();
+		
+		console.log(d.getMonth());
+		console.log(d.getTime());
+		
+		console.log(Math.PI);
+		console.log(Math.SQRT2);
+		
+		var x = 5.238;
+		console.log(Math.floor(x));
+		console.log(Math.ceil(x));
+		console.log(Math.round(x));
+		
+		console.log(Math.random());
+		
+		console.log(window.innerHeight);
+		
+		//window.location.href = "http://google.com";
+		
+		console.log(document.width);
+		
+		document.body.bgColor = 'red';
+    </script>
+</body>
+</html>
