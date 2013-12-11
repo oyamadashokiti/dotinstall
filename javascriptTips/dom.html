@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Javascriptの勉強</title>
+  </head>
+  <body>
+    <h1>javascriptの勉強</h1>
+    
+    <ul id="myList">
+    <li>One</li>
+    <li>Two</li>
+    <li>Three</li>
+    </ul>
+
+    <script>
+      var mylist = document.getElementById('myList');
+      var lis = document.getElementsByTagName('li');
+      console.log(lis[2]);
+      console.log(mylist);
+
+      var fourthLi = document.createElement('li');
+      var fourthLink = document.createElement('a');
+      fourthLink.href = 'http://google.com';
+      var fourthText = document.createTextNode('Four');
+      mylist.appendChild(fourthLi).appendChild(fourthLink).appendChild(fourthText);
+      var fifthLi = fourthLi.cloneNode(true);
+      fifthLi.innerHTML = '<a href="http://yahoo.com">Five</a>';
+      //mylist.appendChild(fifthLi);
+      mylist.insertBefore(fifthLi,lis[1]);
+    </script>
+  </body>
+</html>
+
