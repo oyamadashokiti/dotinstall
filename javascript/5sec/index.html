@@ -1,0 +1,37 @@
+<!DOCTYPE html >
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>５秒でクリック！ </title>
+  </head>
+  <body>
+    <h1>五秒でキメろ！</h1>
+    <p><input type="button" value="Start" onclick="start();"></P>
+    <p><input type="button" value="Stop" onclick="stop();"></P>
+    <p id="result"></p>
+    <script>
+      var start;
+      var stop;
+      var FIVE_SECOND = 5 * 1000;
+
+      function start(){
+        start = new Date().getTime();
+        console.log(start);
+
+      }
+      function stop(){
+        stop= new Date().getTime();
+        console.log(stop);
+        var diff = FIVE_SECOND - (stop - start);
+        var e = document.getElementById('result');
+        if(diff == 0 ){
+          e.innerHTML = 'ぴったし！すごい！'
+          }else if (diff > 0 ){
+          e.innerHTML = (diff/1000) + '秒早い！';
+        }else{
+          e.innerHTML = (diff/1000)*(-1) + '秒遅い！';
+      }
+      }
+    </script>
+  </body>
+</html>

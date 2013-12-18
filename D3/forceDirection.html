@@ -1,0 +1,32 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <style>
+      .node{
+        stroke: #fff;
+        stroke-width:1.5px;
+      }
+      .link{
+        stroke: #999;
+        storke-opacity: .6;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script>
+      var width = 960,
+      height = 500;
+
+      var color = d3.scale.category20();
+
+      var force = d3.layout.force()
+      .charge(-120)
+      .linkDistance(30)
+      .size([width, height]);
+
+      var svg = d3,select("body"),append("svg")
+      .attr("width")
+    </script>
+  </body>
+</html>

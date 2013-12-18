@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<title>神経衰弱</title>
+    <style>
+      input{
+        font-size: 18px;
+      }
+    </style>
+	</head>
+	<body>
+		<h1>神経衰弱</h1>
+    <p>Score:<span id="score"></span></p>
+    <div id="stage"></div>
+    <!--
+    <input type="button" id="card_0" value="?" >
+    <input type="button" id="card_1" value="?" ><br>
+    <input type="button" id="card_2" value="?" >
+    <input type="button" id="card_3" value="?" >
+    -->
+  	<script>
+      // 0 0 1 1 
+      (function(){
+      var cards = [],
+      CARD_NUM = 16,
+      currentNum,
+      openedCard,
+      correctNum = 0,
+      enableFrip = true,
+      score = 0,
+      timerId;
+
+      function flip(card){
+        if (!enableFrip){
+        return;
+        }
+        //var card = document.getElementById('card_'+ n);
+        if (card.value != '?'){
+          return;
+        }
+        card.value = card.dataset.num;
+        if(typeof currentNum === 'undefined'){
+          openedCard = card;
+            currentNum = card.dataset.num;
+            }else{
+            judge(card);
+            currentNum = undefined;
+      }
+      }
+
+      function judge(card){
+        if(currentNum == card.dataset.num){
+          correctNum++;
+          if (correctNum == CARD_NUM/2){
+            clearTimeout(timerId);
+            alert("your score is .." + document.getElementById('score').innerHTML);
+          }
+          }else{
+            enableFrip = false;
+            setTimeout(function(){
+              openedCard.value = '?';
+              card.value = '?';
+              enableFrip = true;
+            },700);
+        }
+
+    }
+
+      function initCards(){
+        var num,
+        cardIndex,
+        stage = document.getElementById('stage'),
+        i;
+        
+
+        for (i = 0; i < CARD_NUM; i++){
+          num = Math.floor(i/2);
+          do{
+            cardIndex = Math.floor(Math.random() * CARD_NUM);
+          }while(typeof cards[cardIndex] !== 'undefined');
+          cards[cardIndex] = createCard(num);
+        }
+        /*
+        var el = document.getElementsByTagName('input');
+        for(i = 0; i < el.length; i++){
+          el[i].onclick= function(){
+            flip(this.id.replace(/^card_/,''));
+          };
+        }*/
+        
+        for (i = 0; i < CARD_NUM; i++){
+          stage.appendChild(cards[i]);
+          if(i % Math.sqrt(CARD_NUM) == (Math.sqrt(CARD_NUM) - 1)){
+            stage.appendChild(document.createElement('br'));
+          }
+        }
+      }
+
+      function createCard(num){
+        var card = document.createElement('input');
+        card.type = 'button';
+        card.value = '?';
+        card.dataset.num = num;
+        card.onclick = function(){
+          flip(this);
+        };
+        return card;
+      }
+
+      function runTimer(){
+        document.getElementById('score').innerHTML = score++;
+        timerId = setTimeout(function(){
+          runTimer();
+        },10);
+      }
+      initCards();
+      runTimer();
+    })();
+		</script>
+	</body>
+</html>
