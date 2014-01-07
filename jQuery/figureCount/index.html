@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>残り文字数チェッカー</title>
+  <style>
+    #memo{
+      width: 500px;
+      height: 150px;
+    }
+    .warning{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h1>残り文字数チェッカー</h1>
+  <textarea id="memo"></textarea>
+  <div id="count"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+  $(function(){
+    var LIMIT = 30;
+    var WARNING = 10;
+    var count = $('#count');
+
+    count.text(LIMIT);
+
+    function countChars(textarea){
+      var remaining = LIMIT - textarea.val().length;
+      count.text(remaining);
+      if (remaining <= WARNING){
+        count.addClass('warning');
+        }else{
+          count.removeClass('warning');
+        }
+    }
+    $('#memo').keyup(function(){
+        countChars($(this));
+      });
+
+    });
+  </script>
+</body>
+</html>

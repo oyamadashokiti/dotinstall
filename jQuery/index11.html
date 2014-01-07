@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習</title>
+</head>
+<body>
+  <p>jQueryの練習</p>
+  <ul>
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ul>
+  <a href="http://google.com" data-sitename="google">google</a>
+  <input type="text"value="hello">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+    $(function(){
+      var li = $('<li>').text('just added');
+      $('ul > li:eq(1)').before(li);
+      $('ul').append(li);
+      
+    });
+	</script>
+</body>
+</html>

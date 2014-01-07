@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+  <input type="text" id="name">
+  <select id="members" name="members">
+    <option value="">taguchi</option>
+    <option value="">fkoji</option>
+    <option value="">dotinstall</option>
+  </select>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+		$(function(){
+      $('#name')
+      .focus(function(){
+        $(this).css('background', 'red');
+      })
+      .blur(function(){
+        $(this).css('background', 'white');
+      });
+      $('#members').change(function(){
+        alert('changed!');
+      });
+
+		});
+	</script>
+</body>
+</html>

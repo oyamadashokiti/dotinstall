@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習</title>
+  <a href="http://google.com" data-sitename="google">google</a>
+</head>
+<body>
+	<p>jQueryの練習</p>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+    $(function(){
+      //attr  
+      console.log($('a').attr('href'));
+      $('a').attr('href','http://google.co.jp');
+      //data
+      console.log($('a').data('sitename'));
+    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>jQueryの練習</title>
+</head>
+<body>
+	<p>jQueryの練習</p>
+  <div id="box" style="width:100px;height:100px;background-color:red;"></div>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+		$(function(){
+      $('#box').toggle('slow');
+      $('#box').toggle('slow');
+      $('#box').toggle('slow');
+      $('#box').toggle(800,function(){
+        alert("gone");
+      });
+		});
+	</script>
+</body>
+</html>
